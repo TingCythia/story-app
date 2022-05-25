@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+Krav för godkänt:
+☒1.Git & GitHub har använts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+☒2.Projektmappen innehåller en README.md fil - (läs ovan för mer info)
 
-## Available Scripts
+☒3.Uppgiften lämnas in i tid!
 
-In the project directory, you can run:
+☒4.Muntlig presentation är genomförd
 
-### `npm start`
+☒5.Applikationens struktur skall vara genomtänk samt uppdelad i olika moduler.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+☒6.Applikationen skall vara skriven i Typescript samt genererad via VITE. Ts-config som generaras via VITE skall inte ändras för att ta bort typescript-regler.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+☒7.Inga ”any”-typningar får finnas.
 
-### `npm test`
+☒8.Minst 1 st. Interface skall användas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+☒9.Spelet skall ha minst 5 vägskäl/frågor med minst 2 möjliga svar per fråga (alla vägskäl/frågor behöver inte visas för att klara spelet).
 
-### `npm run build`
+☒10.Interaktionen ifrån användaren skall ske via ett gränssnitt med knappar som svar på frågorna.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Krav för väl godkänt:
+☒1.Alla punkter ovan (G-krav) är uppfyllda2.Spelet skall ha minst 10 vägskäl/frågor med minst 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+☒2 möjliga svar per fråga (alla vägskäl/frågor behöver inte visas för att klara spelet).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+☒3.Minst 3 st. Interface:s skall användas.
 
-### `npm run eject`
+☒4.Data för storylinen skall vara definierat i ett Interface som håller en array med objekt där varje objekt motsvarar ett vägskäl/fråga. Navigationen mellan olika vägskäl/frågor skall ske via funktionsanrop (för godkänt räcker det med IF-satser i en loop).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+☐5.Det skall finnas minst 2 vägskäl där användaren skall mata in text som svar på frågan.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+☒6.Minst 2 frågor skall ha en bild i sin beskrivning.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+☒7.Spelet skall ha mer än ett potentiellt slut
