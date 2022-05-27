@@ -1,6 +1,6 @@
-import GameType from "./types/GameTypes";
-import Cuteimage from "./src/assets/074.png";
-import Congrats from "./src/assets/Congrats.png";
+import GameType from "types/GameTypes";
+import Cuteimage from "./assets/074.png";
+import Congrats from "./assets/Congrats.png"
 const Game: GameType ={
     1:{
         StepTextContent: {question: "Are you ready to continue?"},
