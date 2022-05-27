@@ -1,12 +1,7 @@
-import ItemTypes from "./ItemTypes";
-
-
-
 export interface option {
     title:string;
     nextStepId?:number;
-    required?: ItemTypes[];
-    newState?: Partial<Record<ItemTypes, boolean>>;
+
 }
 
 interface Step{
@@ -19,6 +14,7 @@ interface Step{
 export interface stepTextContent{
     question?:string,
     description?: img ,
+    answer?:string,
 }
 
 export interface img{
