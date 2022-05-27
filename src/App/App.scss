@@ -1,1 +1,55 @@
 @import "../default.scss";
+
+.app{
+    height: 100vh;
+    width: 100vw;
+    background-color: $LIGHTORANGE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+
+
+.question{
+    font-family: Comfortaa;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+
+}
+img{
+    margin-top: 50px;
+    width: 50%;
+    height: auto;
+}
+.options{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 60%);
+    margin-top: 60px;
+
+
+
+    button{
+        margin:1rem;
+        padding:1rem;
+        background-color: $BROWN;
+        color: aliceblue;
+        border-radius: 20px;
+        border: 2px solid ;
+        font-family: Comfortaa;
+        font-weight: 500;
+        font-size: 1.5rem;
+        
+        &:hover{
+            background-color: rgba(178, 109, 24, 0.746);
+        }
+        
+    }
+}
+
+
+}

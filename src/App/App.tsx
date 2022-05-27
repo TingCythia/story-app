@@ -7,10 +7,9 @@ return
 (<div className="app">
     <div className="question">First question</div>
     <div className="options">
-        <button />
-        <button />
-        <button />
-        <button />
+       <button></button> 
+       <button></button> 
+       
     </div>
 </div>);
 
