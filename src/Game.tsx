@@ -1,4 +1,4 @@
-import GameType from "./src/types/GameTypes";
+import GameType from "./types/GameTypes";
 import Cuteimage from "./src/assets/074.png";
 import Congrats from "./src/assets/Congrats.png";
 const Game: GameType ={
