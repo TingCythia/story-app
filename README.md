@@ -1,3 +1,8 @@
+Github länk: 
+
+https://github.com/TingCythia/story-app
+
+
 Krav för godkänt:
 ☒1.Git & GitHub har använts
 
