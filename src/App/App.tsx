@@ -4,11 +4,15 @@ import "./App.scss"
 
 const App: React.FC = () => {
 return
-
-<div className="options">
-
-
-</div>
+(<div className="app">
+    <div className="question">First question</div>
+    <div className="options">
+        <button />
+        <button />
+        <button />
+        <button />
+    </div>
+</div>);
 
 };
 
