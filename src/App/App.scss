@@ -10,7 +10,10 @@
     flex-direction: column;
 
     
-
+.InsideDiv{
+    margin-top: -250px;
+    text-align: center;
+}
 
 .question{
     font-family: Comfortaa;
@@ -18,8 +21,6 @@
     font-weight: 700;
     text-align: center;
     margin-top: 60px;
-
-
 }
 .answer{
     font-family: Comfortaa;

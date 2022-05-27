@@ -43,6 +43,8 @@ const App: React.FC = () => {
 
 return (
 <div className="app">
+
+<div className="InsideDiv">
 <img src={step.StepTextContent.description?.img } /> 
 <div className="question">{step.StepTextContent?.question}
 </div> 
@@ -65,7 +67,7 @@ return (
     >{option.title}</button>
 ))}
 </div>
-
+</div>
 
 </div>
 );
