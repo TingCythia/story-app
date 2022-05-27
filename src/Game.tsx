@@ -1,5 +1,5 @@
 import GameType from "types/GameTypes";
-import Cuteimage from "./assets/074.png";
+import Cuteimage from "./assets/OhNo.png";
 import Congrats from "./assets/Congrats.png"
 const Game: GameType ={
     1:{
