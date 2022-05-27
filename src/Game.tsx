@@ -1,136 +1,145 @@
 import GameType from "types/GameTypes";
-import Cuteimage from "./assets/OhNo.png";
-import Congrats from "./assets/Congrats.png"
+import Congrats from "./assets/Congrats.png";
+import RubrikCube from "./assets/cube2.jpg";
+import Averge from "./assets/average.png"
 const Game: GameType ={
     1:{
-        StepTextContent: {question: "Are you ready to continue?"},
+        StepTextContent: {question: "Do you like art more or science more?"},
         options:[ 
         {
-			title: "Yes, please take me to the next step!",
+			title: "I like art more!",
 			nextStepId: 2,
-			newState: { Mobile: false },
+		
 		},
         {
-            title: "We dont accept No, so we will send you to another portal!",
-            nextStepId: 3,
-            newState: { MasterKey: false },
+            title: "I like science more!",
+            nextStepId: 4,
+           
         },
     ],
     },
     2:{
-        StepTextContent: {question: "In front of you have two doors, which one you will enter?"},
+        StepTextContent: {
+            question: "Can you solve the third-order Rubik's cube?",
+            description:{img:RubrikCube}
+        },
         options:[ 
           
 			{
-				title: "This door will send you to the past, the item you can bring is a smart phone!",
-				required: ["Mobile"],
-				newState: { Mobile: true },
+				title: "Yes, I can solve it!",
 				nextStepId: 5,
 			},
 			{
-				title: "This door will send you to the future, the item you need is a master key!",
-				required: ["MasterKey"],
-				newState: { MasterKey: true },
-				nextStepId: 6,
+				title: "Not really!",
+				nextStepId: 3,
 			},
         ],
     },
     3:{
         StepTextContent:
-        {question: "Because you haven't choose to come here, we automatically send you to the past, but you can choose the time you want to visit"},
-        defaultNextStep: 4,
+        {question: "Do you pay attention to the details in life?"},
+       
         options: [
-			{ title: "20 years ago!" },
-			{ title: "50 years ago!" },
+			{ title: "Pay attention ", nextStepId:4 },
+			{ title: "Not too much paying attention ", nextStepId:6},
 		],
     },
     4: {
 		StepTextContent:
-			{question: "Now you are in the past, if you want to come back you need to looking for a master key to open time portal?"},
+			{question: "Do you like to live in high-rise buildings?"},
 		options: [
 			{
-				title: "I want to stay and look for the key!",
-				required: ["MasterKey"],
-				newState: { MasterKey: true},
-				nextStepId: 5,
+				title: "I want to live in high rise building",
+				nextStepId: 7,
 			},
-			{ title: "I want to go for another method!", nextStepId: 7 },
+			{ title: "Dislike", nextStepId: 6 },
+            { title: "Not like or dislike ", nextStepId: 5 },
 			
 		],
 	},
     5:{
-        StepTextContent: {question:"After several days search job, you got some information about the master key, now what you want to do?"},
+        StepTextContent: {question:"Do you use a lot of scratch paper when solving math problems?"},
         options:[ 
         {
-			title: "Use the phone to locate the key, but have to wait the phone have signal!",
-			nextStepId: 6,
+			title: "A lot !",
+			nextStepId: 8,
 			
 		},
         {
-            title: "Gain more information from local people then decide which way to go!",
-            nextStepId: 8,
-            newState: { MasterKey: true },
+            title: "Very little !",
+            nextStepId: 7,
         },
     ],
     },
     6:{
         StepTextContent:
-        {question:"You are waiting several days but the phone still no signal, so you want to?"},
-        defaultNextStep: 9,
+        {question:"Do you often go to escape the room?"},
+        
         options: [
-			{ title: "Continue to wait the signal!" },
-			{ title: "Make a new phone!" },
+            {
+                title: "Often !",
+                nextStepId: 7,
+                
+            },
+            {
+                title: "Never !",
+                nextStepId: 9,
+            },
+            {
+                title: "Occasionally!",
+                nextStepId: 8,
+            },
 		],
     },
     7:{
-        StepTextContent: {question:"Here we have 2 options for you, which one you like to choose?"},
+        StepTextContent: {question:"Do you like to play some new games?"},
         options:[ 
         {
-			title: "You believe there must be a time portal to travel back, so you start to search for clues and build the full picture for yourself !",
-			nextStepId: 10,
-			newState: { Mobile: true },
+			title: "Yes!",
+			nextStepId: 8,
 		},
         {
-            title: "Moving on 8!",
-            nextStepId: 8,
-            newState: { MasterKey: true },
+            title: "No!",
+            nextStepId: 10,
         },
     ],
     },
     8:{
         StepTextContent:
-        {question: "GO straight to 9?"},
+        {question: "What type of person are you?"},
         defaultNextStep: 9,
         options: [
-			{ title: "You only way out !" },
-		/* 	{ title: "Open the door!" }, */
+			{ title: "Click to check the answer!" },
 		],
     },
     9:{
         StepTextContent:
-        { description:{img:Cuteimage}},
+        {question: "Your logical thinking is average",
+        description:{img:Averge},
+        answer: "For all kinds of big and small things in life, you can't forget all kinds of details, because your memory is better, but many times you just remember the rules and regulations, but you can't know how to get them. You also think that you don’t need to know, so your logical ability is not particularly strong, but you don’t think this will bring much trouble to your life, because you feel that your memory is excellent, and this aspect can be used in your life. will be of great help to you.",
+        },
        
         options: [
-            { title: "Oh No ! You are stuck in the past foreve!" },
             {
-                title: "Restart the game!",
+                title: "Restart this game again!",
                 nextStepId: 1,
             },
 		],
     },
     10:{
         StepTextContent:
-        
-        { description:{img:Congrats},
-          question:"Finally! You made it! After your hardwork and make the way out!"
+        {
+        description:{img:Congrats},
+        question: "your logical thinking is relatively strong",
+        answer: "You have been sensitive to number comparison since you were a child. Compared with other students, you always like to play Sudoku. You think this game can exercise your thinking ability. Many times you also find some difficult problems to do. Do you think This is more challenging, this kind of unyielding attitude and pursuing attitude will make you work better in the society. Sometimes you can bring a lot of power to the people around you with your own thinking ability. , they are also very dependent on you, so your social circle is very wide.",
         },
        
         options: [
             {
-                title: "Restart the game!",
+                title: "Restart this game again!",
                 nextStepId: 1,
             },
-        ],
+		],
     },
 };
 

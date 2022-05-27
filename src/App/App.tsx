@@ -1,3 +1,4 @@
+import { stringify } from "querystring";
 import React,{useState} from "react";
 import Game from "../Game";
 
@@ -23,11 +24,31 @@ const App: React.FC = () => {
         }
     };
 
+/*  \\ Want to check the state and disable one of button when is false\\ 
+    const checkState = (option: boolean) => {
+        option = false || true;
+		
+		if (step.options) {
+			step.options.forEach((item) => {
+				if (item.newState === false) {
+					option = false;
+				} else if (item.newState=== true){
+                    option = true;
+                }
+			});
+		}
+		if (option) return "disabled";
+		else return "";
+	}; */
+
 return (
 <div className="app">
-    
-<div className="question">{step.StepTextContent?.question}</div> 
-<img src={step.StepTextContent.description?.img} /> 
+<img src={step.StepTextContent.description?.img } /> 
+<div className="question">{step.StepTextContent?.question}
+</div> 
+
+<div className="answer">{step.StepTextContent?.answer}</div> 
+
 {
 /* Now use map to looking all the options and the number  */
 /* Let button set the key as index, set a onclick function to look for the index*/ 
@@ -37,6 +58,7 @@ return (
 {step.options.map((option, index)=> (
     <button 
     key={index}
+    /* className={checkState(option.newState===true || false)} */
     onClick={()=>{
         onOptionClick(index);
     }}
